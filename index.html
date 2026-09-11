@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mushroom Onesies — ridiculously cosy, wildly original psychedelic onesies. Launching soon.">
+  <title>Mushroom Onesies — Get Weird. Stay Cosy.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Mushroom Onesies home">
+      <span class="logo-cap">◒</span>
+      <span>MUSHROOM<br>ONESIES</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#drop">The drop</a>
+      <a href="#story">Our story</a>
+      <a class="nav-cta" href="#waitlist">Join the trip</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="orbit orbit-one" aria-hidden="true"></div>
+      <div class="orbit orbit-two" aria-hidden="true"></div>
+      <p class="eyebrow">COMING SOON · VERY COSY · SLIGHTLY UNHINGED</p>
+      <h1>GET WEIRD.<br><span>STAY COSY.</span></h1>
+      <p class="hero-copy">Wearable wonderlands for sofa surfers, festival creatures and professional fun-guys.</p>
+      <a class="big-button" href="#waitlist">GET FIRST DIBS <span>↘</span></a>
+
+      <div class="mushroom-stage" aria-label="A playful psychedelic mushroom illustration">
+        <div class="sunburst"></div>
+        <div class="mushroom mushroom-left"><i></i><b></b></div>
+        <div class="mushroom mushroom-main"><i></i><b></b></div>
+        <div class="mushroom mushroom-right"><i></i><b></b></div>
+        <span class="spark s1">✦</span><span class="spark s2">✺</span><span class="spark s3">✦</span>
+      </div>
+      <div class="ticker" aria-hidden="true"><div>SOFT ENOUGH TO HIBERNATE IN ✦ LOUD ENOUGH TO BE SEEN FROM SPACE ✦ NO BORING CLOTHES ALLOWED ✦ </div></div>
+    </section>
+
+    <section class="drop" id="drop">
+      <p class="eyebrow dark">THE FIRST SPORE DROP</p>
+      <div class="section-heading">
+        <h2>ONE ONESIE.<br>ZERO CHILL.</h2>
+        <p>One outrageous design. One gloriously cosy limited first run. Join the list and you’ll hear the second it sprouts.</p>
+      </div>
+      <div class="product-grid single-product">
+        <article class="product original">
+          <span class="badge">THE FIRST DROP</span>
+          <div class="mini-shroom">✺</div>
+          <div class="product-copy">
+            <p class="product-kicker">THE ONE THAT STARTED IT ALL</p>
+            <h3>THE ORIGINAL<br>MUSHROOM ONESIE</h3>
+            <p>A wearable wonderland made for maximum comfort and absolutely minimum blending in.</p>
+            <button type="button" class="notify" data-style="The Original Mushroom Onesie">GET FIRST DIBS</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-sticker">100%<br>GOOD<br>VIBES</div>
+      <div>
+        <p class="eyebrow">WHY MUSHROOM ONESIES?</p>
+        <h2>LIFE’S TOO SHORT<br>FOR BEIGE.</h2>
+      </div>
+      <p>We’re making proper statement onesies: outrageously comfortable, gloriously colourful and built for anyone who refuses to blend in.</p>
+    </section>
+
+    <section class="waitlist" id="waitlist">
+      <p class="eyebrow">BE FIRST INTO THE FOREST</p>
+      <h2>JOIN THE TRIP.</h2>
+      <p>Early access, launch offers and absolutely no corporate waffle.</p>
+      <form id="signup-form">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="YOUR EMAIL ADDRESS" required>
+        <button type="submit">I’M IN <span>→</span></button>
+      </form>
+      <p class="form-note" id="form-note" role="status">Preview mode — email collection will be connected before launch.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#top"><span class="logo-cap">◒</span><span>MUSHROOM<br>ONESIES</span></a>
+    <p>© <span id="year"></span> Mushroom Onesies</p>
+    <div><a href="mailto:hello@mushroomonesies.com">hello@mushroomonesies.com</a> <span>🍄</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
