@@ -1,112 +1,1108 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mushroom Onesies. Psychedelic mushroom print onesies, launching soon.">
+
+  <meta
+    name="description"
+    content="Mushroom Onesies. Psychedelic mushroom print onesies, launching soon."
+  >
+
   <title>Mushroom Onesies | Get Weird. Stay Cosy.</title>
+
   <link rel="icon" type="image/png" href="amanita-favicon.png">
   <link rel="apple-touch-icon" href="amanita-favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="styles.css?v=hero-spacing-2">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1377365991209996');
-fbq('track', 'PageView');
-</script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1377365991209996&ev=PageView&noscript=1"
-/>
-</noscript>
-<!-- End Meta Pixel Code -->
+  <!-- =========================================================
+       META PIXEL
+       Pixel ID: 1377365991209996
+  ========================================================== -->
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ?
+        n.callMethod.apply(n,arguments) :
+        n.queue.push(arguments)
+      };
+
+      if(!f._fbq)f._fbq=n;
+
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+
+    }(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js'
+    );
+
+    fbq('init', '1377365991209996');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      style="display:none"
+      src="https://www.facebook.com/tr?id=1377365991209996&ev=PageView&noscript=1"
+      alt=""
+    >
+  </noscript>
+
+  <!-- END META PIXEL -->
+
+
+  <!-- =========================================================
+       BUY INTENT POPUP STYLING
+  ========================================================== -->
+
+  <style>
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    .sold-out-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+    }
+
+    .sold-out-modal.is-open {
+      display: flex;
+    }
+
+    .sold-out-backdrop {
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 62, 173, 0.40),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 80% 80%,
+          rgba(200, 255, 0, 0.28),
+          transparent 35%
+        ),
+        rgba(28, 0, 48, 0.94);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .sold-out-box {
+      position: relative;
+      z-index: 2;
+
+      width: min(560px, 100%);
+
+      padding: 50px 34px 38px;
+
+      text-align: center;
+
+      background: #fff4d0;
+
+      border: 5px solid #21003b;
+      border-radius: 30px;
+
+      box-shadow:
+        14px 14px 0 #ff3ead,
+        -10px -10px 0 #c8ff00;
+
+      transform: rotate(-1deg);
+
+      animation: mushroomPop 0.25s ease-out;
+    }
+
+    @keyframes mushroomPop {
+
+      from {
+        opacity: 0;
+        transform:
+          scale(0.85)
+          rotate(-3deg);
+      }
+
+      to {
+        opacity: 1;
+        transform:
+          scale(1)
+          rotate(-1deg);
+      }
+
+    }
+
+    .sold-out-box h2 {
+
+      margin:
+        10px
+        0
+        18px;
+
+      font-family:
+        "Archivo Black",
+        sans-serif;
+
+      font-size:
+        clamp(
+          58px,
+          11vw,
+          105px
+        );
+
+      line-height: 0.85;
+
+      letter-spacing:
+        -0.06em;
+
+      color:
+        #21003b;
+
+    }
+
+    .sold-out-box p {
+
+      max-width:
+        430px;
+
+      margin:
+        0 auto 26px;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size:
+        18px;
+
+      font-weight:
+        600;
+
+      line-height:
+        1.5;
+
+      color:
+        #21003b;
+
+    }
+
+    .sold-out-close {
+
+      position:
+        absolute;
+
+      top:
+        10px;
+
+      right:
+        16px;
+
+      border:
+        0;
+
+      background:
+        transparent;
+
+      color:
+        #21003b;
+
+      font-size:
+        38px;
+
+      line-height:
+        1;
+
+      cursor:
+        pointer;
+
+    }
+
+    .sold-out-close:hover {
+      transform:
+        scale(1.15);
+    }
+
+    .sold-out-mushroom {
+
+      width:
+        82px;
+
+      height:
+        82px;
+
+      object-fit:
+        contain;
+
+      margin-bottom:
+        4px;
+
+    }
+
+    .sold-out-label {
+
+      display:
+        inline-block;
+
+      margin-bottom:
+        4px;
+
+      font-family:
+        "Archivo Black",
+        sans-serif;
+
+      font-size:
+        13px;
+
+      letter-spacing:
+        0.08em;
+
+      color:
+        #5520c7;
+
+    }
+
+    .sold-out-email {
+
+      display:
+        inline-block;
+
+      padding:
+        17px 25px;
+
+      border-radius:
+        999px;
+
+      background:
+        #21003b;
+
+      color:
+        #fff4d0;
+
+      font-family:
+        "Archivo Black",
+        sans-serif;
+
+      font-size:
+        15px;
+
+      text-decoration:
+        none;
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+
+    }
+
+    .sold-out-email:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 7px 0 #ff3ead;
+
+    }
+
+    .sold-out-small {
+
+      margin-top:
+        18px !important;
+
+      margin-bottom:
+        0 !important;
+
+      font-size:
+        13px !important;
+
+      font-weight:
+        600 !important;
+
+      opacity:
+        0.70;
+
+    }
+
+    @media (max-width: 600px) {
+
+      .sold-out-box {
+
+        padding:
+          42px 22px 30px;
+
+        border-width:
+          4px;
+
+        box-shadow:
+          8px 8px 0 #ff3ead,
+          -6px -6px 0 #c8ff00;
+
+      }
+
+      .sold-out-box p {
+        font-size:
+          16px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
+
+
   <div class="noise" aria-hidden="true"></div>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
   <header class="site-header">
-    <a class="logo" href="#top" aria-label="Mushroom Onesies home">
-      <img class="brand-mark" src="amanita-favicon.png" alt="">
-      <span>MUSHROOM<br>ONESIES</span>
+
+    <a
+      class="logo"
+      href="#top"
+      aria-label="Mushroom Onesies home"
+    >
+
+      <img
+        class="brand-mark"
+        src="amanita-favicon.png"
+        alt=""
+      >
+
+      <span>
+        MUSHROOM<br>
+        ONESIES
+      </span>
+
     </a>
+
+
     <nav aria-label="Main navigation">
-      <a href="#drop">The drop</a>
-      <a href="#story">Our story</a>
-      <a class="nav-cta" href="#drop">Buy now · £39.99</a>
+
+      <a href="#drop">
+        The drop
+      </a>
+
+      <a href="#story">
+        Our story
+      </a>
+
+      <a
+        class="nav-cta js-buy-intent"
+        href="#drop"
+      >
+        Buy now · £39.99
+      </a>
+
     </nav>
+
   </header>
 
+
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+
   <main id="top">
+
+
+    <!-- HERO -->
+
     <section class="hero">
-      <div class="orbit orbit-one" aria-hidden="true"></div>
-      <div class="orbit orbit-two" aria-hidden="true"></div>
-      <p class="eyebrow">COMING SOON · PSYCHEDELIC PRINT · SERIOUSLY COSY</p>
-      <h1>GET WEIRD.<br><span>STAY COSY.</span></h1>
-      <p class="hero-copy">A bold mushroom print onesie for lazy days, cold nights and festivals.</p>
-      <a class="big-button" href="#drop">BUY NOW · £39.99 <span>↘</span></a>
 
-      <div class="mushroom-stage" aria-label="A playful psychedelic mushroom illustration">
+      <div
+        class="orbit orbit-one"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="orbit orbit-two"
+        aria-hidden="true"
+      ></div>
+
+
+      <p class="eyebrow">
+        COMING SOON · PSYCHEDELIC PRINT · SERIOUSLY COSY
+      </p>
+
+
+      <h1>
+        GET WEIRD.<br>
+        <span>
+          STAY COSY.
+        </span>
+      </h1>
+
+
+      <p class="hero-copy">
+        A bold mushroom print onesie for lazy days,
+        cold nights and festivals.
+      </p>
+
+
+      <a
+        class="big-button js-buy-intent"
+        href="#drop"
+      >
+
+        BUY NOW · £39.99
+
+        <span>
+          ↘
+        </span>
+
+      </a>
+
+
+
+      <!-- MUSHROOM ART -->
+
+      <div
+        class="mushroom-stage"
+        aria-label="A playful psychedelic mushroom illustration"
+      >
+
         <div class="sunburst"></div>
-        <div class="mushroom mushroom-left"><i></i><b></b></div>
-        <div class="mushroom mushroom-main"><i></i><b></b></div>
-        <div class="mushroom mushroom-right"><i></i><b></b></div>
-        <span class="spark s1">✦</span><span class="spark s2">✺</span><span class="spark s3">✦</span>
+
+
+        <div class="mushroom mushroom-left">
+          <i></i>
+          <b></b>
+        </div>
+
+
+        <div class="mushroom mushroom-main">
+          <i></i>
+          <b></b>
+        </div>
+
+
+        <div class="mushroom mushroom-right">
+          <i></i>
+          <b></b>
+        </div>
+
+
+        <span class="spark s1">
+          ✦
+        </span>
+
+        <span class="spark s2">
+          ✺
+        </span>
+
+        <span class="spark s3">
+          ✦
+        </span>
+
       </div>
-      <div class="ticker" aria-hidden="true"><div>SOFT FLEECE ✦ FULL ZIP ✦ DEEP POCKETS ✦ LIMITED FIRST RUN ✦ SOFT FLEECE ✦ FULL ZIP ✦ DEEP POCKETS ✦ LIMITED FIRST RUN ✦ </div></div>
+
+
+
+      <!-- TICKER -->
+
+      <div
+        class="ticker"
+        aria-hidden="true"
+      >
+
+        <div>
+
+          SOFT FLEECE ✦
+          FULL ZIP ✦
+          DEEP POCKETS ✦
+          LIMITED FIRST RUN ✦
+
+          SOFT FLEECE ✦
+          FULL ZIP ✦
+          DEEP POCKETS ✦
+          LIMITED FIRST RUN ✦
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="drop" id="drop">
-      <p class="eyebrow dark">THE FIRST SPORE DROP</p>
+
+
+    <!-- =========================================================
+         PRODUCT
+    ========================================================== -->
+
+    <section
+      class="drop"
+      id="drop"
+    >
+
+
+      <p class="eyebrow dark">
+        THE FIRST SPORE DROP
+      </p>
+
+
       <div class="section-heading">
-        <h2>ONE ONESIE.<br>ZERO CHILL.</h2>
-        <p>One psychedelic mushroom onesie. £39.99.</p>
+
+        <h2>
+          ONE ONESIE.<br>
+          ZERO CHILL.
+        </h2>
+
+        <p>
+          One psychedelic mushroom onesie.
+          £39.99.
+        </p>
+
       </div>
+
+
+
       <div class="product-grid single-product">
+
+
         <article class="product original">
-          <span class="badge">THE FIRST DROP</span>
+
+
+          <span class="badge">
+            THE FIRST DROP
+          </span>
+
+
+
           <figure class="product-visual">
-            <img src="mushroom-onesie-concept-v2.png" alt="Front and back view of The Original Mushroom Onesie with a normal hood and psychedelic mushroom print">
+
+            <img
+              src="mushroom-onesie-concept-v2.png"
+              alt="Front and back view of The Original Mushroom Onesie with a normal hood and psychedelic mushroom print"
+            >
+
           </figure>
+
+
+
           <div class="product-copy">
-            <p class="product-kicker">THE FIRST DESIGN</p>
-            <h3>THE ORIGINAL<br>MUSHROOM ONESIE</h3>
-            <p>Soft fleece, a relaxed unisex fit, full front zip, deep pockets and our custom mushroom print.</p>
-            <p class="price">£39.99</p>
-            <button type="button" class="buy-button" aria-describedby="checkout-note" disabled>BUY NOW</button>
-            <p class="checkout-note" id="checkout-note">Checkout will be connected next.</p>
+
+
+            <p class="product-kicker">
+              THE FIRST DESIGN
+            </p>
+
+
+            <h3>
+              THE ORIGINAL<br>
+              MUSHROOM ONESIE
+            </h3>
+
+
+            <p>
+              Soft fleece,
+              a relaxed unisex fit,
+              full front zip,
+              deep pockets
+              and our custom mushroom print.
+            </p>
+
+
+            <p class="price">
+              £39.99
+            </p>
+
+
+
+            <!-- REAL TEST BUTTON -->
+
+            <button
+              type="button"
+              class="buy-button js-buy-intent"
+            >
+
+              BUY NOW · £39.99
+
+            </button>
+
+
+            <p
+              class="checkout-note"
+              id="checkout-note"
+            >
+
+              Secure checkout · UK delivery
+
+            </p>
+
+
           </div>
+
         </article>
+
       </div>
+
     </section>
 
-    <section class="story" id="story">
-      <div class="story-sticker">100%<br>GOOD<br>VIBES</div>
-      <div>
-        <p class="eyebrow">WHY MUSHROOM ONESIES?</p>
-        <h2>COMFORT SHOULD<br>NOT LOOK BORING.</h2>
+
+
+    <!-- =========================================================
+         STORY
+    ========================================================== -->
+
+    <section
+      class="story"
+      id="story"
+    >
+
+
+      <div class="story-sticker">
+
+        100%<br>
+        GOOD<br>
+        VIBES
+
       </div>
-      <p>We are starting with one unisex onesie, made from soft fleece and covered in our own psychedelic mushroom print.</p>
+
+
+
+      <div>
+
+        <p class="eyebrow">
+          WHY MUSHROOM ONESIES?
+        </p>
+
+
+        <h2>
+          COMFORT SHOULD<br>
+          NOT LOOK BORING.
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        We are starting with one unisex onesie,
+        made from soft fleece
+        and covered in our own psychedelic mushroom print.
+
+      </p>
+
+
     </section>
+
 
   </main>
 
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
   <footer>
-    <a class="logo footer-logo" href="#top"><img class="brand-mark" src="amanita-favicon.png" alt=""><span>MUSHROOM<br>ONESIES</span></a>
-    <p>© <span id="year"></span> Mushroom Onesies</p>
-    <div class="footer-contact"><a href="mailto:hello@mushroomonesies.com">hello@mushroomonesies.com</a><img class="brand-mark brand-mark-small" src="amanita-favicon.png" alt=""></div>
+
+
+    <a
+      class="logo footer-logo"
+      href="#top"
+    >
+
+      <img
+        class="brand-mark"
+        src="amanita-favicon.png"
+        alt=""
+      >
+
+      <span>
+        MUSHROOM<br>
+        ONESIES
+      </span>
+
+    </a>
+
+
+
+    <p>
+
+      ©
+      <span id="year"></span>
+      Mushroom Onesies
+
+    </p>
+
+
+
+    <div class="footer-contact">
+
+      <a href="mailto:hello@mushroomonesies.com">
+
+        hello@mushroomonesies.com
+
+      </a>
+
+
+      <img
+        class="brand-mark brand-mark-small"
+        src="amanita-favicon.png"
+        alt=""
+      >
+
+    </div>
+
+
   </footer>
+
+
+
+  <!-- =========================================================
+       BUY INTENT / NOT AVAILABLE POPUP
+  ========================================================== -->
+
+  <div
+    class="sold-out-modal"
+    id="soldOutModal"
+    aria-hidden="true"
+  >
+
+
+    <div class="sold-out-backdrop"></div>
+
+
+
+    <div
+      class="sold-out-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="soldOutTitle"
+    >
+
+
+      <button
+        class="sold-out-close"
+        id="soldOutClose"
+        aria-label="Close"
+      >
+
+        ×
+
+      </button>
+
+
+
+      <img
+        src="amanita-favicon.png"
+        class="sold-out-mushroom"
+        alt=""
+      >
+
+
+
+      <span class="sold-out-label">
+
+        THE FIRST SPORE DROP
+
+      </span>
+
+
+
+      <h2 id="soldOutTitle">
+
+        NOT<br>
+        LIVE YET.
+
+      </h2>
+
+
+
+      <p>
+
+        You got here early.
+
+        The first Mushroom Onesies drop
+        isn't available to buy just yet.
+
+      </p>
+
+
+
+      <a
+        href="mailto:hello@mushroomonesies.com?subject=Tell%20me%20when%20Mushroom%20Onesies%20launches"
+        class="sold-out-email"
+      >
+
+        TELL ME WHEN IT DROPS 🍄
+
+      </a>
+
+
+
+      <p class="sold-out-small">
+
+        £39.99 · First drop coming soon
+
+      </p>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================================================
+       EXISTING SCRIPT
+  ========================================================== -->
+
   <script src="script.js"></script>
+
+
+
+  <!-- =========================================================
+       BUY INTENT TRACKING
+  ========================================================== -->
+
+  <script>
+
+    const buyButtons =
+      document.querySelectorAll(
+        '.js-buy-intent'
+      );
+
+
+    const soldOutModal =
+      document.getElementById(
+        'soldOutModal'
+      );
+
+
+    const soldOutClose =
+      document.getElementById(
+        'soldOutClose'
+      );
+
+
+
+    function openSoldOutModal(event) {
+
+      event.preventDefault();
+
+
+      /*
+        META PIXEL EVENT
+
+        This DOES NOT report a Purchase.
+
+        It reports that somebody
+        actually pressed the £39.99
+        BUY button.
+      */
+
+      if (
+        typeof fbq ===
+        'function'
+      ) {
+
+        fbq(
+          'trackCustom',
+          'BuyIntent',
+          {
+
+            content_name:
+              'The Original Mushroom Onesie',
+
+            content_ids:
+              ['MO-001'],
+
+            content_type:
+              'product',
+
+            value:
+              39.99,
+
+            currency:
+              'GBP'
+
+          }
+        );
+
+      }
+
+
+
+      soldOutModal
+        .classList
+        .add(
+          'is-open'
+        );
+
+
+      soldOutModal
+        .setAttribute(
+          'aria-hidden',
+          'false'
+        );
+
+
+      document
+        .body
+        .classList
+        .add(
+          'modal-open'
+        );
+
+    }
+
+
+
+    function closeSoldOutModal() {
+
+      soldOutModal
+        .classList
+        .remove(
+          'is-open'
+        );
+
+
+      soldOutModal
+        .setAttribute(
+          'aria-hidden',
+          'true'
+        );
+
+
+      document
+        .body
+        .classList
+        .remove(
+          'modal-open'
+        );
+
+    }
+
+
+
+    buyButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          'click',
+          openSoldOutModal
+        );
+
+      }
+    );
+
+
+
+    soldOutClose.addEventListener(
+      'click',
+      closeSoldOutModal
+    );
+
+
+
+    soldOutModal.addEventListener(
+      'click',
+      function(event) {
+
+        if (
+          event.target.classList.contains(
+            'sold-out-modal'
+          )
+          ||
+          event.target.classList.contains(
+            'sold-out-backdrop'
+          )
+        ) {
+
+          closeSoldOutModal();
+
+        }
+
+      }
+    );
+
+
+
+    document.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (
+          event.key ===
+          'Escape'
+        ) {
+
+          closeSoldOutModal();
+
+        }
+
+      }
+    );
+
+
+
+    /*
+      CURRENT YEAR
+    */
+
+    const year =
+      document.getElementById(
+        'year'
+      );
+
+
+    if (year) {
+
+      year.textContent =
+        new Date()
+          .getFullYear();
+
+    }
+
+  </script>
+
+
 </body>
+
 </html>
