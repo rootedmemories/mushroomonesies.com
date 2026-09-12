@@ -7,7 +7,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 document.querySelectorAll('.notify').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelector('#waitlist').scrollIntoView({ behavior: 'smooth' });
-    note.textContent = `${button.dataset.style} selected — add your email for first dibs.`;
+    note.textContent = `${button.dataset.style} selected. Add your email for first dibs.`;
     email.focus({ preventScroll: true });
   });
 });
